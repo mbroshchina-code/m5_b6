@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-09-24T18:00:15.986969+00:00",
+  "collection": "docs_semantic_s512_o64",
+  "strategy": "semantic",
+  "parameters": {
+    "buffer_size": 1,
+    "breakpoint_percentile_threshold": 95,
+    "post_splitter": "SentenceSplitter",
+    "chunk_size": 512,
+    "chunk_overlap": 64
+  },
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dimension": 1536,
+  "corpus_signature": "e17118ff267f075e48ee12bbab251f1cd2752b200a79661cbcad0b1a5ba995db",
+  "golden_questions": 24,
+  "points_count": 147,
+  "statistics": {
+    "documents": 103,
+    "chunks": 147,
+    "avg_chunks_per_document": 1.427,
+    "avg_chunk_tokens": 186.67,
+    "min_chunk_tokens": 9,
+    "max_chunk_tokens": 399,
+    "total_chunk_tokens": 27441
+  }
+}

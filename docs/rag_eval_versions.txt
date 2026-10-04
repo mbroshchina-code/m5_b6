@@ -1,0 +1,25 @@
+ВЕРСИИ
+ragas==0.4.3
+langchain-community==0.3.31
+langchain-core==1.6.6
+anthropic==0.116.0
+openai==2.45.0
+pandas==2.3.3
+arize-phoenix==18.0.0
+arize-phoenix-otel==0.16.1
+llama-index-core==0.14.24
+llama-index-vector-stores-qdrant==0.10.3
+openinference-instrumentation-llama-index==3.3.3
+openinference-instrumentation-openai==0.1.52
+opentelemetry-sdk==1.43.0
+opentelemetry-exporter-otlp==1.43.0
+
+СИГНАТУРЫ МЕТРИК
+Faithfulness.ascore(self, user_input: str, response: str, retrieved_contexts: List[str]) -> ragas.metrics.result.MetricResult
+AnswerRelevancy.ascore(self, user_input: str, response: str) -> ragas.metrics.result.MetricResult
+ContextPrecision.ascore(self, user_input: str, reference: str, retrieved_contexts: List[str]) -> ragas.metrics.result.MetricResult
+ContextRecall.ascore(self, user_input: str, retrieved_contexts: List[str], reference: str) -> ragas.metrics.result.MetricResult
+
+ВСЕ ИМПОРТЫ УСПЕШНЫ
+Клиенты моделей не создавались.
+Генерация, эмбеддинги и оценивание не запускались.

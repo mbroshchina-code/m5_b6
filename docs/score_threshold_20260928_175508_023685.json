@@ -1,0 +1,287 @@
+{
+  "created_at": "2026-09-28T17:55:08.023685+00:00",
+  "collection": "ingest_training_bugs",
+  "embedding_model": "text-embedding-3-small",
+  "retrieval_top_k": 10,
+  "current_threshold": 0.3,
+  "generation_called": false,
+  "reranker_called": false,
+  "positive_distribution": {
+    "count": 7,
+    "min": 0.4239257,
+    "median": 0.48504382,
+    "max": 0.6337539
+  },
+  "negative_distribution": {
+    "count": 4,
+    "min": 0.19320902,
+    "median": 0.213825025,
+    "max": 0.29008764
+  },
+  "thresholds": [
+    {
+      "threshold": 0.2,
+      "blocked_positive": 0,
+      "positive_total": 7,
+      "passed_negative": 2,
+      "negative_total": 4
+    },
+    {
+      "threshold": 0.25,
+      "blocked_positive": 0,
+      "positive_total": 7,
+      "passed_negative": 1,
+      "negative_total": 4
+    },
+    {
+      "threshold": 0.3,
+      "blocked_positive": 0,
+      "positive_total": 7,
+      "passed_negative": 0,
+      "negative_total": 4
+    },
+    {
+      "threshold": 0.35,
+      "blocked_positive": 0,
+      "positive_total": 7,
+      "passed_negative": 0,
+      "negative_total": 4
+    },
+    {
+      "threshold": 0.4,
+      "blocked_positive": 0,
+      "positive_total": 7,
+      "passed_negative": 0,
+      "negative_total": 4
+    },
+    {
+      "threshold": 0.45,
+      "blocked_positive": 3,
+      "positive_total": 7,
+      "passed_negative": 0,
+      "negative_total": 4
+    },
+    {
+      "threshold": 0.5,
+      "blocked_positive": 4,
+      "positive_total": 7,
+      "passed_negative": 0,
+      "negative_total": 4
+    }
+  ],
+  "retrieval_misses": 0,
+  "results": [
+    {
+      "question": "При округлении скидка применяется и к табаку.",
+      "relevant_bug_ids": [
+        147
+      ],
+      "top_score": 0.48504382,
+      "retrieved_bug_ids": [
+        147,
+        108,
+        137,
+        139,
+        133,
+        130,
+        112,
+        103,
+        138,
+        116
+      ],
+      "relevant_in_candidates": true
+    },
+    {
+      "question": "За подписку на КС списались лишние деньги.",
+      "relevant_bug_ids": [
+        142
+      ],
+      "top_score": 0.589271,
+      "retrieved_bug_ids": [
+        142,
+        112,
+        116,
+        135,
+        147,
+        150,
+        115,
+        122,
+        141,
+        113
+      ],
+      "relevant_in_candidates": true
+    },
+    {
+      "question": "пишет ошибку 400",
+      "relevant_bug_ids": [
+        105
+      ],
+      "top_score": 0.4239257,
+      "retrieved_bug_ids": [
+        105,
+        110,
+        116,
+        145,
+        128,
+        146,
+        115,
+        102,
+        103,
+        132
+      ],
+      "relevant_in_candidates": true
+    },
+    {
+      "question": "в Эдо написано «Некорректный статус регистрации».",
+      "relevant_bug_ids": [
+        110
+      ],
+      "top_score": 0.6337539,
+      "retrieved_bug_ids": [
+        110,
+        122,
+        131,
+        109,
+        118,
+        143,
+        115,
+        135,
+        102,
+        114
+      ],
+      "relevant_in_candidates": true
+    },
+    {
+      "question": "из личного кабинета пропал терминал",
+      "relevant_bug_ids": [
+        111
+      ],
+      "top_score": 0.5145504,
+      "retrieved_bug_ids": [
+        113,
+        122,
+        111,
+        109,
+        103,
+        132,
+        144,
+        117,
+        140,
+        107
+      ],
+      "relevant_in_candidates": true
+    },
+    {
+      "question": "Ошибка сверки итогов",
+      "relevant_bug_ids": [
+        124
+      ],
+      "top_score": 0.43605387,
+      "retrieved_bug_ids": [
+        133,
+        112,
+        124,
+        140,
+        115,
+        102,
+        114,
+        113,
+        116,
+        150
+      ],
+      "relevant_in_candidates": true
+    },
+    {
+      "question": "откуда-то в кассе взялась сумма 100065,75 внесений не было за сегодня",
+      "relevant_bug_ids": [
+        125
+      ],
+      "top_score": 0.42569882,
+      "retrieved_bug_ids": [
+        105,
+        115,
+        135,
+        125,
+        112,
+        162,
+        142,
+        121,
+        137,
+        150
+      ],
+      "relevant_in_candidates": true
+    },
+    {
+      "question": "Как пересадить домашний кактус в другой горшок?",
+      "relevant_bug_ids": [],
+      "top_score": 0.23098491,
+      "retrieved_bug_ids": [
+        108,
+        136,
+        138,
+        137,
+        146,
+        116,
+        120,
+        139,
+        133,
+        105
+      ],
+      "relevant_in_candidates": null
+    },
+    {
+      "question": "Напиши поздравление с днем рождения.",
+      "relevant_bug_ids": [],
+      "top_score": 0.19666514,
+      "retrieved_bug_ids": [
+        142,
+        110,
+        122,
+        138,
+        141,
+        115,
+        111,
+        107,
+        131,
+        109
+      ],
+      "relevant_in_candidates": null
+    },
+    {
+      "question": "Как приготовить яблочный пирог?",
+      "relevant_bug_ids": [],
+      "top_score": 0.19320902,
+      "retrieved_bug_ids": [
+        108,
+        109,
+        137,
+        136,
+        110,
+        141,
+        130,
+        102,
+        114,
+        146
+      ],
+      "relevant_in_candidates": null
+    },
+    {
+      "question": "Объясни, почему происходит солнечное затмение.",
+      "relevant_bug_ids": [],
+      "top_score": 0.29008764,
+      "retrieved_bug_ids": [
+        120,
+        109,
+        146,
+        116,
+        151,
+        132,
+        113,
+        105,
+        107,
+        133
+      ],
+      "relevant_in_candidates": null
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+model_list:
+  - model_name: gpt-4o-mini
+    litellm_params:
+      model: openai/gpt-4o-mini
+      api_key: "os.environ/LLM__OPENAI_API_KEY"
+      proxy: "os.environ/LLM_OPENAI_PROXY_URL"
+      tpm: 50000
+      rpm: 100
+
+  - model_name: openrouter-fallback
+    litellm_params:
+      model: openrouter/openai/gpt-oss-20b:free
+      api_key: "os.environ/OPENROUTER_API_KEY"
+
+  - model_name: ollama-local
+    litellm_params:
+      model: ollama/qcwind/qwen2.5-7B-instruct-Q4_K_M
+      api_base: "http://localhost:11434"
+
+router_settings:
+  routing_strategy: least-busy
+  fallbacks: [{"gpt-4o-mini": ["openrouter-fallback", "ollama-local"]}]
+  allowed_fails: 3
+  cooldown_time: 30
