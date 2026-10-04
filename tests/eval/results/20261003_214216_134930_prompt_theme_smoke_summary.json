@@ -1,0 +1,31 @@
+{
+  "faithfulness": {
+    "mean": 0.8,
+    "calculated": 1,
+    "missing": 0
+  },
+  "answer_relevancy": {
+    "mean": 0.09613164110046367,
+    "calculated": 1,
+    "missing": 0
+  },
+  "context_precision": {
+    "mean": 0.9999999999,
+    "calculated": 1,
+    "missing": 0
+  },
+  "context_recall": {
+    "mean": 0.8,
+    "calculated": 1,
+    "missing": 0
+  },
+  "has_citation": {
+    "mean": 1.0,
+    "calculated": 1,
+    "missing": 0
+  },
+  "latency_ms": {
+    "mean": 45210.3,
+    "measured": 1
+  }
+}

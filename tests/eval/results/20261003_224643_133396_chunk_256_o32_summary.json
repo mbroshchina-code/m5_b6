@@ -1,0 +1,31 @@
+{
+  "faithfulness": {
+    "mean": 0.6944005143601918,
+    "calculated": 32,
+    "missing": 0
+  },
+  "answer_relevancy": {
+    "mean": 0.174360888962612,
+    "calculated": 32,
+    "missing": 0
+  },
+  "context_precision": {
+    "mean": 0.8858506943898488,
+    "calculated": 32,
+    "missing": 0
+  },
+  "context_recall": {
+    "mean": 0.8572916666666667,
+    "calculated": 32,
+    "missing": 0
+  },
+  "has_citation": {
+    "mean": 0.84375,
+    "calculated": 32,
+    "missing": 0
+  },
+  "latency_ms": {
+    "mean": 10931.675625,
+    "measured": 32
+  }
+}

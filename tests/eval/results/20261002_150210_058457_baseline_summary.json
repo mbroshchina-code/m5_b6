@@ -1,0 +1,22 @@
+{
+  "faithfulness": {
+    "mean": 0.8333333333333333,
+    "calculated": 2,
+    "missing": 0
+  },
+  "answer_relevancy": {
+    "mean": 0.15592776290205812,
+    "calculated": 2,
+    "missing": 0
+  },
+  "context_precision": {
+    "mean": 0.8499999999325,
+    "calculated": 2,
+    "missing": 0
+  },
+  "context_recall": {
+    "mean": 1.0,
+    "calculated": 2,
+    "missing": 0
+  }
+}
