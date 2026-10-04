@@ -1,0 +1,364 @@
+{
+  "created_at": "2026-09-25T19:33:53.631359+00:00",
+  "source": "data/bugs_database.json",
+  "source_sha256": "61b0718be651c4be17e3eb9e0e6dbc25429d5fa9615b8aa8eebcd56ce451d861",
+  "purpose": "Учебная проверка многоформатной индексации",
+  "documents": 50,
+  "formats": {
+    ".md": 25,
+    ".pdf": 25
+  },
+  "total_document_bytes": 1268122,
+  "files": [
+    {
+      "bug_id": 101,
+      "file_name": "bug_101.md",
+      "format": ".md",
+      "size_bytes": 827,
+      "sha256": "91a020821aa9057d5b4ba96766290db4a3d58b8164eb0e6a88dab846e5a34a51"
+    },
+    {
+      "bug_id": 102,
+      "file_name": "bug_102.md",
+      "format": ".md",
+      "size_bytes": 1136,
+      "sha256": "15fee2b63994416bf2ff03a549a2f4f123264c1ecae75abe7c6670a0138fc3fe"
+    },
+    {
+      "bug_id": 103,
+      "file_name": "bug_103.md",
+      "format": ".md",
+      "size_bytes": 1037,
+      "sha256": "18960f445318814980c42b62e4142630fbd6b520c9ae706d76242ecd533dd9fd"
+    },
+    {
+      "bug_id": 105,
+      "file_name": "bug_105.md",
+      "format": ".md",
+      "size_bytes": 717,
+      "sha256": "9b93cbffa3fd86b2a0199d269dc20b57b1455fdbfdc2b42c1c218484d1d2eec0"
+    },
+    {
+      "bug_id": 106,
+      "file_name": "bug_106.md",
+      "format": ".md",
+      "size_bytes": 2403,
+      "sha256": "a32eacd84ebc96f3cd2c8a0be54f0172e1257e0200db90dd9a0e5acdb1fec1f1"
+    },
+    {
+      "bug_id": 107,
+      "file_name": "bug_107.md",
+      "format": ".md",
+      "size_bytes": 1346,
+      "sha256": "c70c56008365515e1dfe79e93266b5183db7a638a47fdbcc7e0ee56626986f3e"
+    },
+    {
+      "bug_id": 108,
+      "file_name": "bug_108.md",
+      "format": ".md",
+      "size_bytes": 1489,
+      "sha256": "d1a7f3b957b051811cdac1641e7b65849b5efc3ef27e4043feff16b5e8d4b912"
+    },
+    {
+      "bug_id": 109,
+      "file_name": "bug_109.md",
+      "format": ".md",
+      "size_bytes": 1733,
+      "sha256": "fd21afd305109f3122748c8e96ab6a78f261d40d6a8797e5fbd4d8d938411c91"
+    },
+    {
+      "bug_id": 110,
+      "file_name": "bug_110.md",
+      "format": ".md",
+      "size_bytes": 856,
+      "sha256": "69d77f302a40e38aeae426ea4dda30794d0cfe79f95ca717616f7a121454a03c"
+    },
+    {
+      "bug_id": 111,
+      "file_name": "bug_111.md",
+      "format": ".md",
+      "size_bytes": 1668,
+      "sha256": "1eab989cb37ba6751476eda37b76840ac19a2b507fb44d31b9101866f75466f5"
+    },
+    {
+      "bug_id": 112,
+      "file_name": "bug_112.md",
+      "format": ".md",
+      "size_bytes": 1330,
+      "sha256": "349525c64ffab7b5e09b4e6ee320e5a85208b670d6ed482859be4b655ea6190c"
+    },
+    {
+      "bug_id": 113,
+      "file_name": "bug_113.md",
+      "format": ".md",
+      "size_bytes": 920,
+      "sha256": "3795775dd01301eec582a2c2ae9ed12872eca5dbfac5199d09377badd3771f9d"
+    },
+    {
+      "bug_id": 114,
+      "file_name": "bug_114.md",
+      "format": ".md",
+      "size_bytes": 1448,
+      "sha256": "2cace751374278f49b043fb6112be379645c2f7149e66dd2637326b06a12edce"
+    },
+    {
+      "bug_id": 115,
+      "file_name": "bug_115.md",
+      "format": ".md",
+      "size_bytes": 1146,
+      "sha256": "7d3ae25308baacb3ae9fccd0e62c81bc02cb0feaf0ec0624c2c12814ed78b266"
+    },
+    {
+      "bug_id": 116,
+      "file_name": "bug_116.md",
+      "format": ".md",
+      "size_bytes": 1263,
+      "sha256": "3c0835f315dd896ccad9e142facaa52b58eb581b3a7a68734a9d266c0bd7e345"
+    },
+    {
+      "bug_id": 117,
+      "file_name": "bug_117.md",
+      "format": ".md",
+      "size_bytes": 1094,
+      "sha256": "5e27100d857351bf715b8513f037f4bb8bf5ebba33134789fdfda38d7450d0d3"
+    },
+    {
+      "bug_id": 118,
+      "file_name": "bug_118.md",
+      "format": ".md",
+      "size_bytes": 998,
+      "sha256": "fad0b1ec1a791e9b68ba5dc048150e172978feca0f7d7b3fbde2e5b9f91ac645"
+    },
+    {
+      "bug_id": 119,
+      "file_name": "bug_119.md",
+      "format": ".md",
+      "size_bytes": 920,
+      "sha256": "eff9c266bb621b645f5f1b197ee497837cc2407fc6ae72d340eb04857612edcc"
+    },
+    {
+      "bug_id": 120,
+      "file_name": "bug_120.md",
+      "format": ".md",
+      "size_bytes": 926,
+      "sha256": "0beb76e569253d8ac78d5fbb74785363b5de67498d1171a9b17699fd0f1793fd"
+    },
+    {
+      "bug_id": 121,
+      "file_name": "bug_121.md",
+      "format": ".md",
+      "size_bytes": 885,
+      "sha256": "20b70efb7307ef873f0ea16d6f9fc6f6766bcca71f3f15ead7068e572c100a31"
+    },
+    {
+      "bug_id": 122,
+      "file_name": "bug_122.md",
+      "format": ".md",
+      "size_bytes": 1052,
+      "sha256": "4d9b3ecd4e237a18602071e8a0120892a941bbcd6eeac94fe998b12dbacf812c"
+    },
+    {
+      "bug_id": 123,
+      "file_name": "bug_123.md",
+      "format": ".md",
+      "size_bytes": 911,
+      "sha256": "2794d96360a8507f974b95447fd240031c86741422c9905dc4c333e49385fded"
+    },
+    {
+      "bug_id": 124,
+      "file_name": "bug_124.md",
+      "format": ".md",
+      "size_bytes": 854,
+      "sha256": "a8ff10d934f02fa11c741bb65b0eee58266e77ccc10a6a4084cfe5bc9c106b0b"
+    },
+    {
+      "bug_id": 125,
+      "file_name": "bug_125.md",
+      "format": ".md",
+      "size_bytes": 900,
+      "sha256": "b5986b9eeca029bc220e25579c540a59356f3a2714abf6d7c7db9a89d100f8cd"
+    },
+    {
+      "bug_id": 126,
+      "file_name": "bug_126.md",
+      "format": ".md",
+      "size_bytes": 912,
+      "sha256": "684bda19737ff8c810668e7d548820cd436faca0dea04ecb80c27fdf5657c8f4"
+    },
+    {
+      "bug_id": 127,
+      "file_name": "bug_127.pdf",
+      "format": ".pdf",
+      "size_bytes": 49241,
+      "sha256": "c78ee6ad5cfa63bd2bb428a55e4c0bf81e0b0bd56277d043e534f269b35155b2"
+    },
+    {
+      "bug_id": 128,
+      "file_name": "bug_128.pdf",
+      "format": ".pdf",
+      "size_bytes": 49648,
+      "sha256": "b49e6b0aa992a3c4c28ca0ec2dc630d45912ba1613e620d8884dafbb79e46d01"
+    },
+    {
+      "bug_id": 129,
+      "file_name": "bug_129.pdf",
+      "format": ".pdf",
+      "size_bytes": 48403,
+      "sha256": "39dd790fc9aa2bf63f2547fa916562f297ab7473eebc7af493fa936ad203fced"
+    },
+    {
+      "bug_id": 130,
+      "file_name": "bug_130.pdf",
+      "format": ".pdf",
+      "size_bytes": 49392,
+      "sha256": "ab463d049e49a0ac8f5e33e69b31cc6e2ead19e88890a53e6d4a5e31c11d0597"
+    },
+    {
+      "bug_id": 131,
+      "file_name": "bug_131.pdf",
+      "format": ".pdf",
+      "size_bytes": 49584,
+      "sha256": "0478584b0018396b0600761936641cb4e326a18eba7dcea230b6e14d0c86bbb4"
+    },
+    {
+      "bug_id": 132,
+      "file_name": "bug_132.pdf",
+      "format": ".pdf",
+      "size_bytes": 50599,
+      "sha256": "91f37205c400c2be1820ed88e452c34e20bb48f7f7d386c2aaffb01679ace3f6"
+    },
+    {
+      "bug_id": 133,
+      "file_name": "bug_133.pdf",
+      "format": ".pdf",
+      "size_bytes": 49852,
+      "sha256": "52738a100696b661a5cccbdf54d498296c2d286001c7bd540f0fe91f02ae23b5"
+    },
+    {
+      "bug_id": 134,
+      "file_name": "bug_134.pdf",
+      "format": ".pdf",
+      "size_bytes": 49042,
+      "sha256": "4ccdabfd6d445563ecd946751800ffb1b9df676fa9ebe7bdb1ca31df063b794a"
+    },
+    {
+      "bug_id": 135,
+      "file_name": "bug_135.pdf",
+      "format": ".pdf",
+      "size_bytes": 48696,
+      "sha256": "9b61b3dfdb13357ee53829e3cbcf379bbb95e5100861f465cd57b8d5aa6d84a5"
+    },
+    {
+      "bug_id": 136,
+      "file_name": "bug_136.pdf",
+      "format": ".pdf",
+      "size_bytes": 50351,
+      "sha256": "3c41c2a691f80136d7614fa594c9a08b1a6770c92e9365c6cbd2643f7ba5574f"
+    },
+    {
+      "bug_id": 137,
+      "file_name": "bug_137.pdf",
+      "format": ".pdf",
+      "size_bytes": 52089,
+      "sha256": "61fb8e38f30108614c9dd791f4983f8065946b65082db4651899113df2d4c3b4"
+    },
+    {
+      "bug_id": 138,
+      "file_name": "bug_138.pdf",
+      "format": ".pdf",
+      "size_bytes": 50169,
+      "sha256": "536b94ffcad1578a73b94f92c8b31cd712b03896b581263e9aff20e8ac39c4a2"
+    },
+    {
+      "bug_id": 139,
+      "file_name": "bug_139.pdf",
+      "format": ".pdf",
+      "size_bytes": 49354,
+      "sha256": "820e714990728343d6a9fb7fd0308d06a3d43237d2ceb1a5010ba0b111b091ab"
+    },
+    {
+      "bug_id": 140,
+      "file_name": "bug_140.pdf",
+      "format": ".pdf",
+      "size_bytes": 48793,
+      "sha256": "5c4209538091754909f206daabd2c7a36a5ce7daae78403195055b92297d21a7"
+    },
+    {
+      "bug_id": 141,
+      "file_name": "bug_141.pdf",
+      "format": ".pdf",
+      "size_bytes": 49545,
+      "sha256": "e69b0c4435f3696e0f2ec133ae9158edb7f1481776a6973ff1fe717996971b38"
+    },
+    {
+      "bug_id": 142,
+      "file_name": "bug_142.pdf",
+      "format": ".pdf",
+      "size_bytes": 48607,
+      "sha256": "c94ea2a752ce6906a801dcc70b05fcefe0f5d5a050aea24f26dd3d84e673d00d"
+    },
+    {
+      "bug_id": 143,
+      "file_name": "bug_143.pdf",
+      "format": ".pdf",
+      "size_bytes": 50349,
+      "sha256": "82b1281f8f2f5b1e172f65a2d05c38aa519d2664c933f6ca79d0d9d2c108bc6f"
+    },
+    {
+      "bug_id": 144,
+      "file_name": "bug_144.pdf",
+      "format": ".pdf",
+      "size_bytes": 48831,
+      "sha256": "595538da5200c80d046f900e2cbc4103f16894064f1595652e2cf56f0be914e1"
+    },
+    {
+      "bug_id": 145,
+      "file_name": "bug_145.pdf",
+      "format": ".pdf",
+      "size_bytes": 48533,
+      "sha256": "e984919e206a4f3860f23e464d3de128145be4b39a9a94e667f0850495c30a36"
+    },
+    {
+      "bug_id": 146,
+      "file_name": "bug_146.pdf",
+      "format": ".pdf",
+      "size_bytes": 50372,
+      "sha256": "13630b675d598193158d63cd8d3bf079cf4953a0a49a3651b599145633981b7b"
+    },
+    {
+      "bug_id": 147,
+      "file_name": "bug_147.pdf",
+      "format": ".pdf",
+      "size_bytes": 49615,
+      "sha256": "719749c0fcd94d059cbb4e106c0ab6190a285521f1236decb8ea2b53f7b53fe2"
+    },
+    {
+      "bug_id": 148,
+      "file_name": "bug_148.pdf",
+      "format": ".pdf",
+      "size_bytes": 49763,
+      "sha256": "5a804b3b87b3a1bda1be08d7981c94ed1319aa3940f38b37b2cdb4e47391fba2"
+    },
+    {
+      "bug_id": 149,
+      "file_name": "bug_149.pdf",
+      "format": ".pdf",
+      "size_bytes": 48482,
+      "sha256": "234c6bb362b44ff8ac76650195c8b6757c7358d61c43744bb9f717ae0a93b103"
+    },
+    {
+      "bug_id": 150,
+      "file_name": "bug_150.pdf",
+      "format": ".pdf",
+      "size_bytes": 49901,
+      "sha256": "1a2edf4f1ee821195c3589a04ead3e0a4772c70865ef4dfc476ac8f2c751f093"
+    },
+    {
+      "bug_id": 151,
+      "file_name": "bug_151.pdf",
+      "format": ".pdf",
+      "size_bytes": 50140,
+      "sha256": "b43348176c5e4eb2ebba647126f3693d7b0c8445274a7f57d359686c32527c27"
+    }
+  ]
+}
