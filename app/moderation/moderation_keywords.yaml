@@ -1,0 +1,25 @@
+keywords:
+  credentials_theft:
+    - "украсть пароль"
+    - "получить чужой пароль"
+    - "обойти авторизацию"
+  destructive_actions:
+    - "удалить чужие данные"
+    - "сломать чужой аккаунт"
+  threats:
+    - "убью тебя"
+    - "взорвать офис"
+
+regex:
+  payment_data:
+    - "(?i)cvv\\s*[:=]?\\s*\\d{3}"
+  credentials_theft:
+    - "(?i)(взломать|украсть)\\s+(аккаунт|уч[её]тную запись)"
+
+thresholds:
+  harassment/threatening: 0.70
+  hate/threatening: 0.70
+  illicit/violent: 0.70
+  self-harm/intent: 0.65
+  self-harm/instructions: 0.65
+  sexual/minors: 0.01
