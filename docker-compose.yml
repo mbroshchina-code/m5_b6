@@ -1,0 +1,128 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.19.1
+    environment:
+      QDRANT__SERVICE__API_KEY: "${QDRANT_API_KEY:?Заполните QDRANT_API_KEY в .env}"
+    ports:
+      - "127.0.0.1:6333:6333"
+      - "127.0.0.1:6334:6334"
+    volumes:
+      - qdrant_storage:/qdrant/storage
+    healthcheck:
+      test:
+        - CMD
+        - bash
+        - -c
+        - "exec 3<>/dev/tcp/127.0.0.1/6333"
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
+    restart: unless-stopped
+
+  redis:
+    image: redis:7.4-alpine
+    command:
+      - redis-server
+      - --appendonly
+      - "yes"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  app:
+    build:
+      context: .
+    env_file:
+      - .env
+    environment:
+      BOT_URL: http://bot:9000
+      REDIS_URL: redis://redis:6379/0
+      QDRANT_URL: http://qdrant:6333
+      QDRANT_API_KEY: "${QDRANT_API_KEY:?Заполните QDRANT_API_KEY в .env}"
+
+      CHAT_STORAGE_DIR: /app/var/chats
+      INGEST_DATA_ROOT: /app/data
+      INGEST_STATE_DIR: /app/var/ingestion
+      EMBEDDING_CACHE_DIR: /app/var/embeddings-cache
+
+      HF_HOME: /app/var/huggingface
+      TIKTOKEN_CACHE_DIR: /app/var/tiktoken
+
+      RAG_ENABLED: "true"
+      CHAT_RAG_ENABLED: "true"
+
+      # Phoenix не входит в этот Compose.
+      # Локальная настройка TRACING_ENABLED в .env не меняется.
+      TRACING_ENABLED: "false"
+
+      # Если Docker-переопределение не задано,
+      # сохраняем имеющиеся настройки клиента.
+      LLM_OPENAI_PROXY_URL: "${DOCKER_LLM_OPENAI_PROXY_URL-${LLM_OPENAI_PROXY_URL-}}"
+      EMBEDDING_PROXY_URL: "${DOCKER_EMBEDDING_PROXY_URL-${EMBEDDING_PROXY_URL-}}"
+
+      NO_PROXY: localhost,127.0.0.1,app,bot,redis,qdrant
+      no_proxy: localhost,127.0.0.1,app,bot,redis,qdrant
+
+    command: ["python", "scripts/container_start.py"]
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - chat-data:/app/var
+      - type: bind
+        source: ./data
+        target: /app/data
+        bind:
+          create_host_path: false
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      qdrant:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.build_opener(urllib.request.ProxyHandler({})).open('http://127.0.0.1:8000/ready', timeout=3).close()"
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30m
+    stop_grace_period: 60s
+    restart: "on-failure:3"
+    init: true
+
+  bot:
+    build:
+      context: .
+    env_file:
+      - .env
+    environment:
+      BOT_TOKEN: "${BOT_TOKEN:?Заполните BOT_TOKEN в .env}"
+      INTERNAL_TOKEN: "${INTERNAL_TOKEN:?Заполните INTERNAL_TOKEN в .env}"
+      BACKEND_URL: http://app:8000
+      BOT_API_PORT: "9000"
+      NO_PROXY: localhost,127.0.0.1,app,bot,redis,qdrant
+      no_proxy: localhost,127.0.0.1,app,bot,redis,qdrant
+    command: ["python", "-m", "bot"]
+    ports:
+      - "127.0.0.1:9000:9000"
+    depends_on:
+      app:
+        condition: service_healthy
+    stop_grace_period: 30s
+    restart: unless-stopped
+    init: true
+
+volumes:
+  chat-data:
+  qdrant_storage:
+  redis-data:

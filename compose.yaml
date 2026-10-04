@@ -1,0 +1,55 @@
+services:
+  app:
+    build: .
+    env_file: .env
+    environment:
+      BOT_URL: http://bot:9000
+      CHAT_STORAGE_DIR: /app/var/chats
+      QDRANT_URL: http://qdrant:6333
+    command: python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - chat-data:/app/var
+    depends_on:
+      qdrant:
+        condition: service_healthy
+    restart: unless-stopped
+
+  bot:
+    build: .
+    env_file: .env
+    environment:
+      BACKEND_URL: http://app:8000
+      BOT_API_PORT: 9000
+    command: python -m bot
+    ports:
+      - "9000:9000"
+    depends_on:
+      - app
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant:v1.19.1
+    environment:
+      QDRANT__SERVICE__API_KEY: "${QDRANT_API_KEY:?Заполните QDRANT_API_KEY в .env}"
+    ports:
+      - "127.0.0.1:6333:6333"
+      - "127.0.0.1:6334:6334"
+    volumes:
+      - qdrant_storage:/qdrant/storage
+    healthcheck:
+      test:
+        - CMD
+        - bash
+        - -c
+        - "exec 3<>/dev/tcp/127.0.0.1/6333"
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 20s
+    restart: unless-stopped
+
+volumes:
+  chat-data:
+  qdrant_storage:
